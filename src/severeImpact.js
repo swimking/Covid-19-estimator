@@ -2,6 +2,7 @@
 /* eslint-disable no-mixed-operators */
 /* eslint-disable radix */
 import Estimator from './computations';
+import daysestimator from './daysestimator';
 
 class Severeimpact extends Estimator {
   // eslint-disable-next-line no-useless-constructor
@@ -10,20 +11,13 @@ class Severeimpact extends Estimator {
   }
 
   infectionsByRequestedTime(args1) {
+    daysestimator();
     this.reportedCases = args1;
     const reportedcases = this.reportedCases * 50;
     let InfectionsforSevereimapact = parseInt(reportedcases * 1024);
     Math.trunc(InfectionsforSevereimapact);
 
     // eslint-disable-next-line default-case
-    switch (true) {
-      case (this.periodType === 'weeks'):
-        InfectionsforSevereimapact *= 7;
-        break;
-      case (this.periodType === 'months'):
-        InfectionsforSevereimapact *= 30;
-        break;
-    }
     return InfectionsforSevereimapact;
   }
 

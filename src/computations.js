@@ -1,6 +1,7 @@
 /* eslint-disable radix */
 /* eslint-disable no-mixed-operators */
 import inputObject from './dataObject';
+import daysestimator from './daysestimator';
 
 // eslint-disable-next-line no-unused-vars
 class Estimator {
@@ -23,21 +24,15 @@ class Estimator {
   }
 
   infectionsByRequestedTime(param) {
+    daysestimator();
     this.reportedCases = param;
 
     // eslint-disable-next-line radix
-    let infectionsExpected = parseInt(this.reportedCases * 1024);
+
+    const infectionsExpected = parseInt(this.reportedCases * 1024);
     Math.floor(infectionsExpected);
 
     // eslint-disable-next-line default-case
-    switch (true) {
-      case (this.periodType === 'weeks'):
-        infectionsExpected *= 7;
-        break;
-      case (this.periodType === 'months'):
-        infectionsExpected *= 30;
-        break;
-    }
     return infectionsExpected;
   }
 
