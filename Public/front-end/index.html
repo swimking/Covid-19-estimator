@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="text">
+    <meta name="theme-color" content="#800080"/>
     <title>Covid19 impact Estimator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="icons/css/all.css">
+    <link rel="stylesheet" href="styles.min.css">
+    
     
 </head>
 <body>
@@ -17,10 +19,14 @@
             
             <form action="">
                 <div class="input_container">
-                    
+
+                        <label for="People" class="People_label">People</label>
                         <input type="text" placeholder='People' data-population="">
+                        <label for="Time">Time to Elapse</label>
                         <input type="text"  placeholder='Time To Elapse'data-time-to-elapse="">
+                        <label for="Reported cases">Reported Cases</label>
                         <input type="text"  placeholder='Reported Cases' data-reported-cases="">
+                        <label for="">Total hospital Beds</label>
                         <input type="text"  placeholder='Total Hospital Beds' data-total-hospital-beds="">
                         <select name="" id="" data-period-Type="">
                             <option value="">Period Type</option>
