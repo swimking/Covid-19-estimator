@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="text">
+    <meta name="theme-color" content="#800080"/>
+    <title>Covid19 impact Estimator</title>
+    <link rel="stylesheet" href="styles.min.css">
+    
+    
+</head>
+<body>
+    <section class="main_section">
+        <div class="form_container">
+            <div class="form_heading_container">
+                <label for="" class="Form_heading">Covid-19 impact Estimator</label>
+            </div>
+            
+            <form action="">
+                <div class="input_container">
+
+                        <label for="people" class="People_label">People</label>
+                        <input type="text" placeholder='People' data-population="" id="people">
+                        <label for="time">Time to Elapse</label>
+                        <input type="text"  placeholder='Time To Elapse'data-time-to-elapse="" id="time">
+                        <label for="reportedcases">Reported Cases</label>
+                        <input type="text"  placeholder='reportedCases' data-reported-cases="" id="reportedcases">
+                        <label for="hospitalbeds">Total hospital Beds</label>
+                        <input type="text"  placeholder='Total Hospital Beds' data-total-hospital-beds="" id="hospitalbeds">
+                        <label for="periodtype">Period Type</label>
+                        <select name="periodtype" id="periodtype" data-period-type="">
+                            
+                            <option value="days">Days</option>
+                            <option value="weeks">Weeks</option>
+                            <option value="months">Months</option>
+                        </select>
+                        
+                        <button class="btn_compute" data-go-estimate="">
+                            Compute
+                        </button>
+
+                   
+                    
+                </div>
+               
+
+            </form>
+        </div>
+    </section>
+</body>
+</html>
